@@ -49,6 +49,7 @@ public class EstudianteControlador {
         estudianteExistente.setNombre(estudiante.getNombre());
         estudianteExistente.setApellido(estudiante.getApellido());
         estudianteExistente.setEmail(estudiante.getEmail());
+        
         servicio.actualizarEstudiante(estudianteExistente);
         return "redirect:/estudiantes"; //Retorna al archivo estudiantes
     }
