@@ -30,6 +30,7 @@
                         <th scope="col">Name</th>
                         <th scope="col">Lastname</th>
                         <th scope="col">Email</th>
+                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,6 +38,11 @@
                         <td th:text ="${estudiante.nombre}" scope="row">1</td>
                         <td th:text ="${estudiante.apellido}">Mark</td>
                         <td th:text ="${estudiante.email}">Otto</td>
+                        <td>
+                            <a th:href="@{/estudiantes/editar/{id}(id=${estudiante.id})}" class="btn btn-info">Editar</a>
+                            <a th:href="@{/estudiantes/{id}(id=${estudiante.id})}" class="btn btn-danger">Editar</a>
+
+                        </td>
                     </tr>
                     
                 </tbody>

@@ -38,7 +38,6 @@ public class EstudianteControlador {
     
      @GetMapping("/estudiantes/editar/{id}")
     public String mostrarFormularioDeEditar(@PathVariable Long id,Model modelo) {
-        Estudiante estudiante = new Estudiante();
         modelo.addAttribute("estudiante", servicio.obtenerEstudiantePorId(id));
         return "editar_estudiante"; 
     }
